@@ -1,0 +1,26 @@
+Subject: Insurance Claim - Registration Required
+
+Dear Customer,
+
+Thank you for contacting us regarding your insurance claim (Reference: {claim_id}).
+
+Unfortunately, we cannot process your claim as the email address "{user_email}" is not registered in our system.
+
+To proceed with your insurance claim, please:
+
+1. Use your registered email address associated with your insurance policy
+2. If you believe this is an error, please contact our customer service team
+3. If you need to update your registered email address, please visit our customer portal
+
+We apologize for any inconvenience this may cause.
+
+For immediate assistance, please contact our customer service team at:
+- Phone: 1-800-XXX-XXXX
+- Email: support@insurance.com
+
+Best regards,
+Insurance Claims Processing Team
+
+---
+This is an automated message. Please do not reply to this email.
+Reference ID: {claim_id} 

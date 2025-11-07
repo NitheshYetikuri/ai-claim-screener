@@ -1,0 +1,47 @@
+INSURANCE CLAIM FULFILLMENT REQUIREMENTS
+
+REQUIREMENT 1: USER MAIL
+- Description: Valid contact email address
+- Status: Automatically captured from email sender
+- Validation: Must be valid email format
+- Notes: Used for all communication regarding the claim
+
+REQUIREMENT 2: REASON FOR CLAIM
+- Description: Clear description of what happened
+- Examples:
+  * Vehicle accident details (date, location, circumstances)
+  * Medical condition or injury description
+  * Property damage explanation
+  * Theft or loss incident details
+- Required Details:
+  * When the incident occurred
+  * Where it happened
+  * How it happened
+  * What was affected/damaged
+
+REQUIREMENT 3: CLAIM AMOUNT
+- Description: Specific monetary amount being claimed
+- Format: Dollar amount (e.g., $5,000, $12,500.50)
+- Requirements:
+  * Must be a specific number, not ranges
+  * Should match supporting documentation
+  * Include currency if applicable
+- Examples: "$2,500 for medical bills", "$8,000 for vehicle repair"
+
+REQUIREMENT 4: SUPPORTING PROOFS
+- Description: Relevant documents and evidence
+- Required Documents (depending on claim type):
+  * Medical bills and reports
+  * Repair estimates or invoices
+  * Police reports (for accidents/theft)
+  * Photos of damage
+  * Receipts and proof of purchase
+  * Insurance policy documents
+- File Types Accepted:
+  * Images: .jpg, .jpeg, .png, .gif, .bmp
+  * Documents: .pdf, .doc, .docx
+  * Spreadsheets: .xls, .xlsx
+- Quality Requirements:
+  * Images must be clear and legible
+  * Documents must be complete
+  * All text must be readable 

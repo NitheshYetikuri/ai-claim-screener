@@ -1,0 +1,27 @@
+Subject: Insurance Claim - Additional Information Required
+
+Dear Customer,
+
+Thank you for submitting your insurance claim. We have reviewed your submission and have the following update:
+
+**REQUIREMENTS SATISFIED:**
+{satisfied_items}
+
+**MISSING REQUIREMENTS:**
+Please provide the following to complete your claim:
+{missing_items}
+
+To complete the processing of your claim, please reply to this email with the missing information and attach the required supporting documents listed above.
+
+**How to Submit:**
+- Reply to this email with any missing information
+- Attach all required documents as separate files
+- Ensure photos are clear and documents are legible
+- Include any additional relevant documentation
+
+Once we receive the additional information, we will proceed with your claim assessment promptly.
+
+Thank you for your cooperation.
+
+Best regards,
+Insurance Claims Team 
