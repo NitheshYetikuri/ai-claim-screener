@@ -1,6 +1,6 @@
 # AI Claim Screener
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
+![Python](https://img.shields.io/badge/Python-3.13%2B-blue?logo=python)
 ![Framework](https://img.shields.io/badge/Framework-FastAPI%20%7C%20Streamlit-green)
 ![Database](https://img.shields.io/badge/Database-MySQL-orange?logo=mysql)
 ![LLM](https://img.shields.io/badge/LLM-AWS%20Bedrock-yellow?logo=amazonaws)
@@ -16,7 +16,7 @@ When a customer submits a new claim via email, this system automatically ingests
 
 This project is monitored and managed via a "Mission Control" Streamlit dashboard.
 
-**(Note: For these images to display, create a `docs/screenshots/` folder in your project and add your screenshots with the filenames below.)**
+
 
 | Overview | AI Job Monitor (Live Log) |
 | :---: | :---: |
@@ -60,37 +60,7 @@ This project is built on a **resilient, producer-consumer architecture** using a
 * **Consumer (`worker.py`):** Fetches `PENDING` jobs, performs all processing, and updates the job status.
 * **Safety Nets:** `stuck_job_resolver.py` and the `human_fulfillment` table catch all errors.
 
-### Data Flow Diagram
 
-```mermaid
-graph TD
-    subgraph "Admin / Operator"
-        A[Admin] -->|Views| AD(streamlit_app.py)
-        AD -->|Reads| DB[(MySQL Database)]
-        AD -->|Adds User| UV_API[apis/user_validator.py]
-    end
-
-    subgraph "Automated Claim Processing"
-        P[Customer Email] --> G[Gmail]
-        G --> M(mail_monitor.py)
-        M -->|1. Add Job (PENDING)| DB[(MySQL Database)]
-        
-        W(worker.py) -->|2. Get Job (LOCK)| DB
-        W -->|3. Validate User| UV_API[apis/user_validator.py]
-        W -->|4. Analyze| LLM[AWS Bedrock]
-        W -->|5. Upload Files| S3[AWS S3]
-        W -->|6. Save Final Record| FF_API[apis/fulfillment_api.py]
-        W -->|7. Send Status Email| MS_API[apis/mail_service.py]
-        W -->|8. Update Job (COMPLETED/FAILED)| DB
-
-        subgraph "Error Handling"
-            W -- On Crash --> HF(human_fulfillment Table)
-            SR(stuck_job_resolver.py) -->|Resets 'FLYING' jobs| DB
-        end
-    end
-````
-
------
 
 ## 4\. Folder Structure
 
